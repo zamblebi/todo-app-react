@@ -1,6 +1,11 @@
 import React from 'react'
+import 'bulma/css/bulma.css'
+import './todoitems.css'
 
 import TodoItems from '../views/TodoItems'
+
+
+
 
 class Todos extends React.Component{
     constructor(props){
@@ -34,11 +39,11 @@ class Todos extends React.Component{
 
     render(){
         return(
-         <div className="Todos">
+         <div className="field">
             <p>Todos Components</p>
             <TodoItems todo={this.state.todos}/>
-            <input type="text" onChange={this.handleChange} value={this.state.text}/>
-            <button onClick={this.addTodo}>Add new</button>
+            <input className="input" type="text" onChange={this.handleChange} value={this.state.text}/>
+            <button className="button is-primary" onClick={this.addTodo}>Add new</button>
          </div>
         )
     }
